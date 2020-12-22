@@ -3,6 +3,6 @@ import { getLabels } from '../controllers/labels'
 
 const router = Router()
 
-router.use('/', getLabels)
+router.get('/', getLabels)
 
 export default router
