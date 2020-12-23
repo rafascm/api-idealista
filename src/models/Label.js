@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize')
 const sequelize = require('../db/index')
+const Task = require('./Task')
 
 class Label extends Sequelize.Model {}
 
@@ -20,5 +21,5 @@ const options = {
 }
 
 Label.init(attributes, options)
-
+Label.belongsTo(Task)
 module.exports = Label
